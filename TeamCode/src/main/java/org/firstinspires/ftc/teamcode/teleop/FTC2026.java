@@ -21,6 +21,7 @@ public class FTC2026 extends OpMode {
         telemetry.addData("Initialization", "success!");
         telemetry.update();
 
+        // hello caroline
     }
     @Override
     public void loop() {
