@@ -26,6 +26,8 @@ public class FTC2026 extends OpMode {
     @Override
     public void loop() {
 
+        double sensitivity = 0.8;
+
         double y = -gamepad1.left_stick_y;
         double x = gamepad1.left_stick_x;
         double rx = -gamepad1.right_stick_x;
@@ -39,10 +41,10 @@ public class FTC2026 extends OpMode {
                 Math.max(Math.abs(backLeftPower),
                         Math.max(Math.abs(frontRightPower), Math.abs(backRightPower)))));
 
-        frontLeft.setPower(frontLeftPower / max);
-        backLeft.setPower(backLeftPower / max);
-        frontRight.setPower(frontRightPower / max);
-        backRight.setPower(backRightPower / max);
+        frontLeft.setPower((frontLeftPower / max) * sensitivity);
+        backLeft.setPower((backLeftPower / max) * sensitivity);
+        frontRight.setPower((frontRightPower / max) * sensitivity);
+        backRight.setPower((backRightPower / max) * sensitivity);
 
     }
 
