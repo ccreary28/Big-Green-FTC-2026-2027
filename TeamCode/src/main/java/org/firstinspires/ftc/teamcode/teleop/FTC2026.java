@@ -41,10 +41,10 @@ public class FTC2026 extends OpMode {
                 Math.max(Math.abs(backLeftPower),
                         Math.max(Math.abs(frontRightPower), Math.abs(backRightPower)))));
 
-        frontLeft.setPower((frontLeftPower / max) * sensitivity);
-        backLeft.setPower((backLeftPower / max) * sensitivity);
-        frontRight.setPower((frontRightPower / max) * sensitivity);
-        backRight.setPower((backRightPower / max) * sensitivity);
+        frontLeft.setPower((frontLeftPower / max));
+        backLeft.setPower((backLeftPower / max));
+        frontRight.setPower((frontRightPower / max));
+        backRight.setPower((backRightPower / max));
 
     }
 
