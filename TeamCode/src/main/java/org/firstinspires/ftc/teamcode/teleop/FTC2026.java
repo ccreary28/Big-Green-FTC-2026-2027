@@ -2,11 +2,13 @@ package org.firstinspires.ftc.teamcode.teleop;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
 @TeleOp(name="FTC2026", group="TeleOp")
 public class FTC2026 extends OpMode {
-    private DcMotor frontLeft, frontRight, backLeft, backRight;
+    private DcMotor frontLeft, frontRight, backLeft, backRight, intake, shooter;
+    private Servo servo;
 
     @Override
     public void init() {
@@ -15,20 +17,34 @@ public class FTC2026 extends OpMode {
         frontLeft  = hardwareMap.get(DcMotor.class, "frontLeft");
         backRight  = hardwareMap.get(DcMotor.class, "backRight");
         frontRight = hardwareMap.get(DcMotor.class, "frontRight");
-        backRight.setDirection(DcMotorSimple.Direction.REVERSE);
-        frontRight.setDirection(DcMotorSimple.Direction.REVERSE);
 
-        telemetry.addData("Initialization", "success!");
+        intake = hardwareMap.get(DcMotor.class, "intake");
+        shooter = hardwareMap.get(DcMotor.class, "shooter");
+
+        servo = hardwareMap.get(Servo.class, "servo");
+        servo.setPosition(1);
+
+        backLeft.setDirection(DcMotor.Direction.REVERSE);
+        frontLeft.setDirection(DcMotor.Direction.REVERSE);
+
+        telemetry.addData("Initialization", "successful!");
+        telemetry.addLine(" ");
+        telemetry.addLine("Use the Left Joystick to drive");
+        telemetry.addLine("Moving the Right Joystick turns the robot's direction");
+        telemetry.addLine("Press ⏶ to intake");
+        telemetry.addLine("Press X to outtake");
+
+
+        telemetry.addLine("GO BIG GREEN!!! ദ്ദി(｡•̀ ,<)");
         telemetry.update();
 
-        // hello caroline
     }
     @Override
     public void loop() {
 
         double y = -gamepad1.left_stick_y;
         double x = gamepad1.left_stick_x;
-        double rx = -gamepad1.right_stick_x;
+        double rx = gamepad1.right_stick_x;
 
         double frontLeftPower  = y + x + rx;
         double backLeftPower   = y - x + rx;
@@ -38,6 +54,22 @@ public class FTC2026 extends OpMode {
                 Math.abs(frontLeftPower),
                 Math.max(Math.abs(backLeftPower),
                         Math.max(Math.abs(frontRightPower), Math.abs(backRightPower)))));
+
+        if (gamepad1.x) {
+            intake.setPower(1);
+        } else intake.setPower(0);
+
+        if (gamepad1.y) {
+            intake.setPower(-1);
+        } else intake.setPower(0);
+
+        if (gamepad1.a) {
+            shooter.setPower(0.57);
+        }
+
+        if (gamepad1.b) {
+            servo.setPosition(0.8);
+        } else servo.setPosition(1);
 
         frontLeft.setPower(frontLeftPower / max);
         backLeft.setPower(backLeftPower / max);
