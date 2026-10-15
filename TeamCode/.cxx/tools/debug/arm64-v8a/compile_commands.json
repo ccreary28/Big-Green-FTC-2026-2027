@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/ccreary28/Downloads/Big-Green-FTC-2026-2027/TeamCode/.cxx/Debug/2h2q3uxi/arm64-v8a",
+  "command": "/Users/ccreary28/Library/Android/sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android24 --gcc-toolchain=/Users/ccreary28/Library/Android/sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/ccreary28/Library/Android/sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dftcrobotcontroller_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC -o CMakeFiles/ftcrobotcontroller.dir/ftcrobotcontroller.cpp.o -c /Users/ccreary28/Downloads/Big-Green-FTC-2026-2027/TeamCode/src/main/cpp/ftcrobotcontroller.cpp",
+  "file": "/Users/ccreary28/Downloads/Big-Green-FTC-2026-2027/TeamCode/src/main/cpp/ftcrobotcontroller.cpp"
+}
+]

@@ -1,0 +1,3 @@
+/Users/ccreary28/Downloads/Big-Green-FTC-2026-2027/TeamCode/.cxx/Debug/2h2q3uxi/arm64-v8a/CMakeFiles/ftcrobotcontroller.dir
+/Users/ccreary28/Downloads/Big-Green-FTC-2026-2027/TeamCode/.cxx/Debug/2h2q3uxi/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/ccreary28/Downloads/Big-Green-FTC-2026-2027/TeamCode/.cxx/Debug/2h2q3uxi/arm64-v8a/CMakeFiles/rebuild_cache.dir

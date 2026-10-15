@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/Users/ccreary28/Downloads/Big-Green-FTC-2026-2027/TeamCode/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/ccreary28/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/ccreary28/Downloads/Big-Green-FTC-2026-2027/TeamCode/.cxx/Debug/2h2q3uxi/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/ccreary28/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/ccreary28/Downloads/Big-Green-FTC-2026-2027/TeamCode/.cxx/Debug/2h2q3uxi/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "ftcrobotcontroller::@6890427a1f51a3e7e1df": {
+      "artifactName": "ftcrobotcontroller",
+      "abi": "arm64-v8a",
+      "output": "/Users/ccreary28/Downloads/Big-Green-FTC-2026-2027/TeamCode/build/intermediates/cxx/Debug/2h2q3uxi/obj/arm64-v8a/libftcrobotcontroller.so",
+      "runtimeFiles": []
+    }
+  }
+}
